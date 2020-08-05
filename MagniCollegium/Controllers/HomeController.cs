@@ -10,7 +10,14 @@ namespace MagniCollegium.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "Magni Collegium";
             return View();
+        }
+
+        [HttpGet]
+        public JsonResult GetHomepageData()
+        {
+            return new JsonResult();
         }
 
         public ActionResult About()
