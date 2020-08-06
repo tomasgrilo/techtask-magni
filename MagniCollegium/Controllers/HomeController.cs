@@ -22,14 +22,14 @@ namespace MagniCollegium.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Welcome to the MagniCollegium web page, here you can manage our Courses, Subjects, Teachers, Students and Grades!";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Tomás Grilo";
 
             return View();
         }
