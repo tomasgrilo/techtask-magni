@@ -6,7 +6,7 @@
             maxStudents: course.maxStudents
         }
 
-        var addCourse = serviceController.addCourse(course);
+        var addCourse = serviceController.create(course);
         addCourse.then(function () {
             alert("Added with success!");
             course.name = null;

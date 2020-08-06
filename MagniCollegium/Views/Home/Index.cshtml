@@ -1,24 +1,47 @@
-﻿<div class="container" ng-controller="homeController">
+﻿<div ng-controller="homeController" ng-cloak>
 
-    <div ng-repeat="course in courses">
-        <p>{{course.Name}}, max number of students: {{course.MaxStudents}}</p>
+    <div class="bg-info text-center card-news">
+        <h3><b>GOOD NEWS!</b></h3>
+        <p>Magni Collegium's BackOffice is now open for BETA Testing! Please give your feedback to the author.
     </div>
 
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Courses</h5>
-            <p class="card-text">There are currently {{courseCount}} active courses, with {{studentCount}} students total</p>
-            <a href="#" class="btn btn-primary">Manage Courses</a>
+    <div class="row">
+        <div class="text-center col-xs-12 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 card">
+            <h4><b>COURSES</b></h4>
+            <p><b>There are currently {{courseCount}} active courses, with {{studentCount}} total students!</b></p>
+            <button class="btn" onclick="@Url.Action("Index", "Course")">Manage</button>
+        </div>
+
+        <div class="text-center col-xs-12 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 card">
+            <h4><b>SUBJECTS</b></h4>
+            <p><b>There are currently {{subjectCount}} active courses, each one with an average of {{subjectStudentsAverage}}</b></p>
+            <button class="btn" onclick="@Url.Action("Index", "Subject")">Manage</button>
         </div>
     </div>
 
-    <form>
-        <input type="text" ng-model="name" placeholder="Course Name" />
-        <input type="number" ng-model="maxStudents" placeholder="Max Number of Students" />
-        <button type="button" ng-click="addCourse()">Add Course</button>
-    </form>
+    <div class="row">
+        <div class="text-center col-xs-12 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 card">
+            <h4><b>TEACHERS</b></h4>
+            <p><b>There are currently {{courseCount}} active courses, with {{studentCount}} students total</b></p>
+            <button class="btn" onclick="@Url.Action("Index", "Teacher")">Manage</button>
+        </div>
 
+        <div class="text-center col-xs-12 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 card">
+            <h4><b>COURSES</b></h4>
+            <p><b>There are currently {{courseCount}} active courses, with {{studentCount}} students total</b></p>
+            <button class="btn" onclick="@Url.Action("Index", "Student")">Manage</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center col-xs-12 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 card">
+            <h4><b>GRADES</b></h4>
+            <p><b>There are currently {{courseCount}} active courses, with {{studentCount}} students total</b></p>
+            <button class="btn" onclick="@Url.Action("Index", "Grade")">Manage</button>
+        </div>
+    </div>
 </div>
+
 
 @section scripts {
     <script src="~/angularControllers/appController.js"></script>

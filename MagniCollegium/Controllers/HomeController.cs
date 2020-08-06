@@ -22,7 +22,7 @@ namespace MagniCollegium.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Welcome to the MagniCollege web page, here you can manage our Courses, Subjects, Teachers, Students and Grades!";
+            ViewBag.Message = "Welcome to the MagniCollegium web page, here you can manage our Courses, Subjects, Teachers, Students and Grades!";
 
             return View();
         }

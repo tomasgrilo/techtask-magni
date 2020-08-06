@@ -10,6 +10,9 @@ namespace MagniCollegium.Controllers
 {
     public class CourseController : BaseController<Course>
     {
-
+        public ActionResult Index()
+        {
+            return View();
+        }
     }
 }
