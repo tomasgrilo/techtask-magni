@@ -8,10 +8,10 @@ using System.Web.Mvc;
 namespace MagniCollegium.Controllers
 {
     /// <summary>
-    /// T is the model parameter
+    /// Generic controller for CRUD methods.
+    /// T is the model parameter as entity.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    /// <typeparam name="P"></typeparam>
     public abstract class BaseController<T> : Controller
         where T : class, new()
     {
@@ -79,6 +79,12 @@ namespace MagniCollegium.Controllers
             }
 
             return Json(new { success = false });
+        }
+
+        [HttpGet]
+        public JsonResult GetTotal()
+        {
+            return Json(this.context.Set<T>().Count(), JsonRequestBehavior.AllowGet);
         }
 
     }
