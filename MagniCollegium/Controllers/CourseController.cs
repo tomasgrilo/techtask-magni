@@ -1,6 +1,5 @@
 ﻿using MagniCollegium.Data;
 using MagniCollegium.Models;
-using MagniCollegium.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +10,6 @@ namespace MagniCollegium.Controllers
 {
     public class CourseController : BaseController<Course>
     {
-      
+
     }
 }

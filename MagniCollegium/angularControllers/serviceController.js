@@ -1,16 +1,22 @@
 ﻿collegeApp.service('serviceController', function ($http) {
 
-    this.getCourses = function () {
-        return $http.get("/Course/ReadAll");
+    this.readAll = function (controller) {
+        return $http.get(`/${controller}/ReadAll`);
     }
 
-    this.addCourse = function (course) {
+    this.insert = function (controller, course) {
         var request = $http({
             method: 'post',
-            url: '/Course/Insert',
+            url: `/${controller}/Insert`,
             data: course
         });
 
         return request;
     }
+
+    this.getTotal = function (controller) {
+        return $http.get(`/${controller}/GetTotal`);
+    }
+
+
 });

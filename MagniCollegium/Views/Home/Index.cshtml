@@ -1,7 +1,15 @@
-﻿<div class="container" ng-controller="mainController">
+﻿<div class="container" ng-controller="homeController">
 
     <div ng-repeat="course in courses">
         <p>{{course.Name}}, max number of students: {{course.MaxStudents}}</p>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Courses</h5>
+            <p class="card-text">There are currently {{courseCount}} active courses, with {{studentCount}} students total</p>
+            <a href="#" class="btn btn-primary">Manage Courses</a>
+        </div>
     </div>
 
     <form>
@@ -14,6 +22,6 @@
 
 @section scripts {
     <script src="~/angularControllers/appController.js"></script>
-    <script src="~/angularControllers/mainController.js"></script>
+    <script src="~/angularControllers/homeController.js"></script>
     <script src="~/angularControllers/serviceController.js"></script>
 }
