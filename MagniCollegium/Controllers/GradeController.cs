@@ -1,6 +1,4 @@
-﻿using MagniCollegium.Data;
-using MagniCollegium.Models;
-using MagniCollegium.Persistence;
+﻿using MagniCollegium.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +7,8 @@ using System.Web.Mvc;
 
 namespace MagniCollegium.Controllers
 {
-    public class CourseController : BaseController<Course>
+    public class GradeController : BaseController<Grade>
     {
-      
+
     }
 }
