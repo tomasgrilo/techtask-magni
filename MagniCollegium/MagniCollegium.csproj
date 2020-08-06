@@ -158,6 +158,10 @@
     <Compile Include="Migrations\202008051831092_StudentSubjectManyToMany.designer.cs">
       <DependentUpon>202008051831092_StudentSubjectManyToMany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008061945516_AddGradesToContext.cs" />
+    <Compile Include="Migrations\202008061945516_AddGradesToContext.designer.cs">
+      <DependentUpon>202008061945516_AddGradesToContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Grade.cs" />
@@ -169,6 +173,7 @@
   <ItemGroup>
     <Content Include="angularControllers\appController.js" />
     <Content Include="angularControllers\courseController.js" />
+    <Content Include="angularControllers\gradeController.js" />
     <Content Include="angularControllers\homeController.js" />
     <Content Include="angularControllers\serviceController.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -209,15 +214,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Grade\Index.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Subject\Index.cshtml" />
+    <Content Include="Views\Teacher\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Services\" />
-    <Folder Include="Views\Base\" />
-    <Folder Include="Views\Grade\" />
-    <Folder Include="Views\Student\" />
-    <Folder Include="Views\Subject\" />
-    <Folder Include="Views\Teacher\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -247,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008051831092_StudentSubjectManyToMany.resx">
       <DependentUpon>202008051831092_StudentSubjectManyToMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008061945516_AddGradesToContext.resx">
+      <DependentUpon>202008061945516_AddGradesToContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

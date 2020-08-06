@@ -12,5 +12,6 @@ namespace MagniCollegium.Models
         public Teacher Teacher { get; set; }
         public ICollection<Student> Students { get; set; }
         public ICollection<Grade> Grades { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 }

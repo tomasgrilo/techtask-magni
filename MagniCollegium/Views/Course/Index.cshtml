@@ -1,12 +1,74 @@
 ﻿<div class="container" ng-controller="courseController" ng-cloak>
 
-    <div ng-repeat="course in courses">
-        <p>{{course.Name}}, max number of students: {{course.MaxStudents}}</p>
-    </div>
 
-    <form>
+    <table class="table table-bordered">
+        <thead style="background-color: grey;">
+            <tr>
+                <th class="text-center">Course ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Max Students</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="course in courses">
+                <td class="text-center">{{course.Id}}</td>
+                <td class="text-center">{{course.Name}}</td>
+                <td class="text-center">{{course.MaxStudents}}</td>
+                <td class="text-center">
+                    <a href="#"
+                       data-target="#updateCourse"
+                       data-toggle="modal" class="btn btn-success"
+                       ng-click="updateCourseRequest(course)">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="#"
+                       class="btn btn-danger"
+                       ng-click="deleteCourse(course.Id)">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <button type="button" ng-hide="adding" ng-click="toAdd()">Add Course</button>
+    <form ng-hide="updating">
         <input type="text" ng-model="name" placeholder="Course Name" />
-        <input type="number" ng-model="maxStudents" placeholder="Max Number of Students" />
+        <input type="number" ng-model="maxStudents" placeholder="Max Number of Students" ng- />
         <button type="button" ng-click="addCourse()">Add Course</button>
     </form>
+
+    <div class="modal" id="updateCourse" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-info">Update Course</h3>
+                </div>
+                <div class="modal-body" style="margin-left: 20px">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="text-info">Nome</label>
+                            <input class="form-control" name="Nome" ng-model="name" type="text" placeholder="Name" />
+                        </div>
+                        <div class="form-group">
+                            <label class="text-info">Max Students</label>
+                            <input class="form-control" name="maxStudents" ng-model="maxStudents" type="number" placeholder="Max Students" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="updateCourse()">
+                        Update
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

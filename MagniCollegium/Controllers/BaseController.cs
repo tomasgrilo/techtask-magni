@@ -46,7 +46,8 @@ namespace MagniCollegium.Controllers
             return Json(context.Set<T>().Find(key), JsonRequestBehavior.AllowGet);
         }
 
-        [HttpPut]
+        //trocado de PUT para POST por localhost falhar
+        [HttpPost]
         public JsonResult Update(T model, int key)
         {
             if(model == null)
@@ -66,7 +67,7 @@ namespace MagniCollegium.Controllers
             return Json(new { success = false });
         }
 
-        [HttpDelete]
+        [HttpPost]
         public JsonResult Delete(int key)
         {
             var modelToDelete = context.Set<T>().Find(key);
