@@ -7,7 +7,7 @@ using System.Web;
 namespace MagniCollegium.Data
 {
     //DEV Initializer, drops database everytime a entity is changed (see "Handle code-first migrations")
-    public class DBInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<MagniCollegiumDBContext>
+    public class DBInitializer : System.Data.Entity.DropCreateDatabaseAlways<MagniCollegiumDBContext>
     {
         protected override void Seed(MagniCollegiumDBContext context)
         {
@@ -47,20 +47,20 @@ namespace MagniCollegium.Data
 
             var subjects = new List<Subject>
             {
-                new Subject{Name="Matematica",Teacher=teachers[1], Courses=courses , },
-                new Subject{Name="Filosofia",Teacher=teachers[2] ,Courses=courses, },
-                new Subject{Name="Ed fisica",Teacher=teachers[3],Courses=courses,}
+                new Subject{Name="Matematica",Teacher=teachers[0], Courses=courses , },
+                new Subject{Name="Filosofia",Teacher=teachers[1] ,Courses=courses, },
+                new Subject{Name="Ed fisica",Teacher=teachers[2],Courses=courses,}
             };
             subjects.ForEach(s => context.Subjects.Add(s));
             context.SaveChanges();
 
             var grades = new List<Grade>
             {
-                new Grade{Score=13, Student=students[1], Subject=subjects[1]},
-                new Grade{Score=20, Student=students[1], Subject=subjects[2]},
-                new Grade{Score=12, Student=students[1], Subject=subjects[3]},
-                new Grade{Score=12, Student=students[2], Subject=subjects[1]},
-                new Grade{Score=12, Student=students[2], Subject=subjects[3]},
+                new Grade{Score=13, Student=students[1], Subject=subjects[0]},
+                new Grade{Score=20, Student=students[1], Subject=subjects[1]},
+                new Grade{Score=12, Student=students[1], Subject=subjects[2]},
+                new Grade{Score=12, Student=students[2], Subject=subjects[0]},
+                new Grade{Score=12, Student=students[2], Subject=subjects[2]},
 
             };
             subjects.ForEach(s => context.Subjects.Add(s));

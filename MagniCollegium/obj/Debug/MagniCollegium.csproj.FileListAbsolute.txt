@@ -81,11 +81,11 @@ C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.A
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.AddedRelationsToModels.resources
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.GradeAdded.resources
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.StudentSubjectManyToMany.resources
+C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.AddGradesToContext.resources
+C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.AddedManyToManyToCoursesSubjects.resources
+C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.ICollectionUpdate.resources
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.csproj.GenerateResource.cache
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.csproj.CoreCompileInputs.cache
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.csproj.CopyComplete
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.dll
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.pdb
-C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.csprojAssemblyReference.cache
-C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.AddGradesToContext.resources
-C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.AddedManyToManyToCoursesSubjects.resources
