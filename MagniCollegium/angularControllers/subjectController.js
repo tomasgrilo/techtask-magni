@@ -90,6 +90,8 @@
         }, function () {
             alert("There was an updating the subject");
         });
+        $scope.teachers = null;
+
     }
 
     //make an Utils class for this

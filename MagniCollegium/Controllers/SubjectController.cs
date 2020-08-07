@@ -28,9 +28,34 @@ namespace MagniCollegium.Controllers
         public override JsonResult Update(Subject model, int key)
         {
 
+            var currentSubject = context.Subjects.Find(key);
+            if(currentSubject != null)
+            {
+                currentSubject.Name = model.Name;
 
-            return base.Update(model, key);
+                //this way it prevents creating another teacher, since we are referecing the existing one
+                var newTeacher = context.Teachers.Find(model.Teacher.Id);
+                if(newTeacher.Id != currentSubject.Teacher.Id)
+                {
+                    currentSubject.Teacher = newTeacher;
+                }
+
+                context.SaveChanges();
+                return Json(new { success = true });
+            }
+
+            return Json(new { success = false });
         }
+
+        public override JsonResult Create(Subject model)
+        {
+            //Defining foreign key teacher otherwise model creates a new one on EF
+            var teacher = context.Teachers.Find(model.Teacher.Id);
+            model.Teacher = teacher;
+
+            return base.Create(model);
+        }
+
 
 
     }

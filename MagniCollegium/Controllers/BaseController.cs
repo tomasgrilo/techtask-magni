@@ -22,7 +22,7 @@ namespace MagniCollegium.Controllers
         }
 
         [HttpPost]
-        public JsonResult Create(T model)
+        public virtual JsonResult Create(T model)
         {
             if(model != null)
             {
