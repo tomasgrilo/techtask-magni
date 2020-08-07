@@ -35,7 +35,7 @@ namespace MagniCollegium.Controllers
         }
 
         [HttpGet]
-        public JsonResult ReadAll()
+        public virtual JsonResult ReadAll()
         {
             return Json(context.Set<T>().ToList(), JsonRequestBehavior.AllowGet);
         }

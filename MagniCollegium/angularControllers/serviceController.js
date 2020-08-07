@@ -51,4 +51,15 @@
     }
 
 
+    this.getAverageGrade = function () {
+        var request = $http.get('/Grade/GetAverageGrade');
+        request.then(function () {
+            $scope.averageGrade = output.data;
+        }, function () {
+            alert("There was an adding the course");
+        });
+        return request;
+    }
+
+
 });

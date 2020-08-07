@@ -1,5 +1,46 @@
 ﻿<div class="container" ng-controller="subjectController" ng-cloak>
 
 
-    
+    <table class="table table-bordered">
+        <thead style="background-color: grey;">
+            <tr>
+                <th class="text-center">Subject ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Teacher</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="subject in subjects">
+                <td class="text-center">{{subject.Id}}</td>
+                <td class="text-center">{{subject.Name}}</td>
+                <td class="text-center">{{subject.Teacher.Name}}</td>
+                @*<td class="text-center">
+                    <a href="#"
+                       data-target="#updateCourse"
+                       data-toggle="modal" class="btn btn-success"
+                       ng-click="updateSubjectRequest(course)">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="#"
+                       class="btn btn-danger"
+                       ng-click="deleteSubject(course.Id)">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>*@
+
+            </tr>
+        </tbody>
+    </table>
+
+    @*<button type="button" ng-hide="adding" ng-click="toAdd()">Add Subject</button>*@
+    <form>
+        <input type="text" ng-model="name" placeholder="Course Name" />
+        <select ng-model="selectedTeacher" ng-options="teacher.Name for teacher in teachers"></select>
+        <button type="button" ng-click="addSubject()">Add Subject</button>
+    </form>
+
+
+
 </div>

@@ -9,7 +9,7 @@ namespace MagniCollegium.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Teacher Teacher { get; set; }
+        public virtual Teacher Teacher { get; set; }
         public ICollection<Student> Students { get; set; }
         public ICollection<Grade> Grades { get; set; }
         public ICollection<Course> Courses { get; set; }

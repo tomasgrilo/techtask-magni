@@ -6,7 +6,7 @@
     getStudentsCount();
     getTeachersCount();
     getSubjectsCount();
-
+    getAverageGrade();
 
     function getCoursesCount() {
         var courseCount = serviceController.getTotal('Course');
@@ -46,7 +46,12 @@
     }
 
     function getAverageGrade() {
-
+        var averageGrade = serviceController.getAverageGrade('Grade');
+        averageGrade.then(function (output) {
+            main.averageGrade = output.data;
+        }, function () {
+            alert("There was an error getting the average grade");
+        });
     }
 
 

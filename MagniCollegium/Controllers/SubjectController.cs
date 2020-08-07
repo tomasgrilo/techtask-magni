@@ -9,10 +9,11 @@ namespace MagniCollegium.Controllers
 {
     public class SubjectController : BaseController<Subject>
     {
-        // GET: Subject
+
         public ActionResult Index()
         {
             return View();
         }
+
     }
 }

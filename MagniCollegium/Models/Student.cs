@@ -11,7 +11,7 @@ namespace MagniCollegium.Models
         public string Name { get; set; }
         public DateTime Birthday { get; set; }
         public int RegistationNumber { get; set; }
-        public ICollection<Grade> Grades { get; set; }
-        public ICollection<Subject> Subjects { get; set; }
+        public virtual ICollection<Grade> Grades { get; set; }
+        public virtual ICollection<Subject> Subjects { get; set; }
     }
 }

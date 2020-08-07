@@ -29,9 +29,6 @@
     $scope.toUpdate = function () {
         $scope.adding = false;
         $scope.updating = true;
-        $scope.name = null;
-        $scope.maxStudents = null;
-        $scope.courseId = null;
     }
 
     $scope.addCourse = function () {

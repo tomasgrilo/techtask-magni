@@ -7,7 +7,7 @@ using System.Web;
 namespace MagniCollegium.Data
 {
     //DEV Initializer, drops database everytime a entity is changed (see "Handle code-first migrations")
-    public class DBInitializer : System.Data.Entity.DropCreateDatabaseAlways<MagniCollegiumDBContext>
+    public class DBInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<MagniCollegiumDBContext>
     {
         protected override void Seed(MagniCollegiumDBContext context)
         {
@@ -38,9 +38,9 @@ namespace MagniCollegium.Data
 
             var teachers = new List<Teacher>
             {
-                new Teacher{Name="Joao", Birthday=DateTime.Now, Salary=40000},
-                new Teacher{Name="Maria", Birthday=DateTime.Now, Salary=35000},
-                new Teacher{Name="Tiago", Birthday=DateTime.Now, Salary=60000}
+                new Teacher{Name="Joao", Birthday= new DateTime(1943, 03,10), Salary=40000},
+                new Teacher{Name="Maria", Birthday=new DateTime(1963, 03,10), Salary=35000},
+                new Teacher{Name="Tiago", Birthday=new DateTime(1933, 03,10), Salary=60000}
             };
             teachers.ForEach(s => context.Teachers.Add(s));
             context.SaveChanges();
@@ -63,9 +63,8 @@ namespace MagniCollegium.Data
                 new Grade{Score=12, Student=students[2], Subject=subjects[2]},
 
             };
-            subjects.ForEach(s => context.Subjects.Add(s));
+            grades.ForEach(s => context.Grades.Add(s));
             context.SaveChanges();
-
         }
     }
 }
