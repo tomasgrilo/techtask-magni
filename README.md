@@ -17,7 +17,7 @@ Built in ASP.NET MVC, SQL Server, EntityFramework, AngularJS
 
 - The EntityFramework will set up the Local Database for you, was built with Code-First.
 - The project does not include any testing framework.
-- The color palette were chosen based on MagniFinance's web page.
+- The color palette was chosen based on MagniFinance's web page.
 
 
 ### Folder Structure
