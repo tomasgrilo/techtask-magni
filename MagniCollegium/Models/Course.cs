@@ -10,7 +10,7 @@ namespace MagniCollegium.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public int MaxStudents { get; set; }
-        public List<Subject> Subjects { get; set; }
-        public List<Student> Students { get; set; }
+        public ICollection<Subject> Subjects { get; set; }
+        public ICollection<Student> Students { get; set; }
     }
 }

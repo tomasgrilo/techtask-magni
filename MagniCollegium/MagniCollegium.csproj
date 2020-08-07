@@ -134,6 +134,7 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Data\DBInitializer.cs" />
     <Compile Include="Data\MagniCollegiumDBContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
