@@ -24,7 +24,6 @@ Built in ASP.NET MVC, SQL Server, EntityFramework, AngularJS
 
 - `angularControllers` - [AngularJS](https://angularjs.org/) Controllers
 - `Content` - CSS and [BootStrap](https://getbootstrap.com/) .
-- `.storybook` - [Storybook](https://storybook.js.org/) configs.
 - `Data` - Data Access Layer folder.
 - `Migrations` - EF CodeFirst migrations
 
