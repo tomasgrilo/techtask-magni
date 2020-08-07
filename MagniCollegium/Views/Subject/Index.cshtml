@@ -14,33 +14,59 @@
                 <td class="text-center">{{subject.Id}}</td>
                 <td class="text-center">{{subject.Name}}</td>
                 <td class="text-center">{{subject.Teacher.Name}}</td>
-                @*<td class="text-center">
+                <td class="text-center">
                     <a href="#"
-                       data-target="#updateCourse"
+                       data-target="#updateSubject"
                        data-toggle="modal" class="btn btn-success"
-                       ng-click="updateSubjectRequest(course)">
+                       ng-click="updateSubjectRequest(subject)">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                 </td>
                 <td>
                     <a href="#"
                        class="btn btn-danger"
-                       ng-click="deleteSubject(course.Id)">
+                       ng-click="deleteSubject(subject.Id)">
                         <span class="glyphicon glyphicon-trash"></span>
                     </a>
-                </td>*@
+                </td>
 
             </tr>
         </tbody>
     </table>
 
-    @*<button type="button" ng-hide="adding" ng-click="toAdd()">Add Subject</button>*@
-    <form>
+    <button type="button" ng-hide="adding" ng-click="toAdd()">Add Subject</button>
+    <form ng-hide="updating">
         <input type="text" ng-model="name" placeholder="Course Name" />
         <select ng-model="selectedTeacher" ng-options="teacher.Name for teacher in teachers"></select>
         <button type="button" ng-click="addSubject()">Add Subject</button>
     </form>
 
-
+    <div class="modal" id="updateSubject">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-info">Update Subject</h3>
+                </div>
+                <div class="modal-body" style="margin-left: 20px">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="text-info">Name</label>
+                            <input class="form-control" name="Name" ng-model="name" type="text" placeholder="Name" />
+                        </div>
+                        <div class="form-group">
+                            <label class="text-info">Select Teacher</label>
+                            <select ng-model="selectedTeacher" ng-options="teacher.Name for teacher in teachers"></select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="updateSubject()">
+                        Update
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>

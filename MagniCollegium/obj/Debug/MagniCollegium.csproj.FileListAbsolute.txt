@@ -89,3 +89,5 @@ C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.csproj.CoreC
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.csproj.CopyComplete
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.dll
 C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.pdb
+C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.csprojAssemblyReference.cache
+C:\dev\repos\techtask_magni\MagniCollegium\obj\Debug\MagniCollegium.Migrations.cascadeDelete.resources

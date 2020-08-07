@@ -171,6 +171,10 @@
     <Compile Include="Migrations\202008071053006_ICollectionUpdate.designer.cs">
       <DependentUpon>202008071053006_ICollectionUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008071428479_cascadeDelete.cs" />
+    <Compile Include="Migrations\202008071428479_cascadeDelete.designer.cs">
+      <DependentUpon>202008071428479_cascadeDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Grade.cs" />
@@ -270,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008071053006_ICollectionUpdate.resx">
       <DependentUpon>202008071053006_ICollectionUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008071428479_cascadeDelete.resx">
+      <DependentUpon>202008071428479_cascadeDelete.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

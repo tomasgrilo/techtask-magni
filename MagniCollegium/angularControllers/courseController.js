@@ -86,7 +86,7 @@
             alert("Successfully updated!");
             initialize();
         }, function () {
-            alert("There was an deleting the course");
+              alert("There was an updating the course");
         });
     }
 

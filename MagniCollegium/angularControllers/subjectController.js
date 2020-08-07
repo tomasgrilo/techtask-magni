@@ -2,6 +2,22 @@
 
 
     var controller = 'Subject';
+    $scope.adding = false;
+    $scope.updating = true;
+
+    $scope.toAdd = function () {
+        $scope.adding = true;
+        $scope.updating = false;
+        $scope.name = null;
+        $scope.selectedTeacher = null;
+        $scope.id = null;
+    }
+
+    $scope.toUpdate = function () {
+        $scope.adding = false;
+        $scope.updating = true;
+    }
+
 
     initialize();
     function initialize() {
@@ -40,6 +56,41 @@
         });
     }
 
+
+    //The delete class for example could be in serviceController case its always used the same way
+    $scope.deleteSubject = function (key) {
+        var deleteSubject = serviceController.delete(controller, key);
+        deleteSubject.then(function () {
+            alert("Successfully deleted!");
+            initialize();
+        }, function () {
+            alert("There was an deleting the subject");
+        });
+    }
+
+    $scope.updateSubjectRequest = function (model) {
+        $scope.id = model.Id;
+        $scope.name = model.Name;
+        $scope.selectedTeacher = model.Teacher;
+        $scope.toUpdate();
+    }
+
+    //The update class for example could be in serviceController case its always used the same way
+    $scope.updateSubject = function () {
+        var subject = {
+            Id: $scope.id,
+            Name: $scope.name,
+            Teacher: $scope.selectedTeacher
+        }
+
+        var updateSubject = serviceController.update(controller, subject, subject.Id);
+        updateSubject.then(function () {
+            alert("Successfully updated!");
+            initialize();
+        }, function () {
+            alert("There was an updating the subject");
+        });
+    }
 
     //make an Utils class for this
     function formatDatetime(jsonDate) {
