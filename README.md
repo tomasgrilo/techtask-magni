@@ -29,23 +29,23 @@ Built in ASP.NET MVC, SQL Server, EntityFramework, AngularJS
 
 ### Notes (in portuguese)
 
-Trabalho efetuado:
-Instalação do Visual Studio e dos componentes necessários (EF, angularJS, etc). ~1,5h
-Modelo de dados, entidades e adaptação para EF code first. ~4/5h
-Server-side (backend) development ~4h
-Front-end ~10h
+#### Trabalho efetuado:
+- Instalação do Visual Studio e dos componentes necessários (EF, angularJS, etc). ~1,5h
+- Modelo de dados, entidades e adaptação para EF code first. ~4/5h
+- Server-side (backend) development ~4h
+- Front-end ~10h
 
-TODOs:
-Colocar news no modelo de dados, de forma a ser apresentado na página inicial em vez de tar hardcoded.
-Cloak na página de forma a carregar os dados antes de aparecer modelos de angular vazios (atenção que este podem demorar algum tempo a carregar a primeira vez que abrimos a página/criamos a BD).
-Validações de CRUD server-side no modelo de dados, após generic BaseController.
-Tornar blocos de código nas páginas de Index em componentes, de forma a não repetir código de tabelas etc.
-Adaptar projeto ao SignalR.
-Mapear propriedades no JsonResult.
-Para resolver o JSON date problem:https://stackoverflow.com/questions/206384/how-do-i-format-a-microsoft-json-date, criar um controlador angular utils para gerir estas dates (foi resolvido diretamente no controlador).
-Páginas para gestão de professores, estudantes e notas.
-Erro cascade delete quando apagamos os Subjects que dependem das Grades, devia apagar as Grades automaticamente (resolvido fazendo override dos Delete/update) - Resolvido com override nos metodos dando a referência do objeto correto ao EF.
-Algumas validações front-end anti SQL Injection, expressões regulares em ng-pattern, etc.
+#### TODOs:
+- Colocar news no modelo de dados, de forma a ser apresentado na página inicial em vez de tar hardcoded.
+- Cloak na página de forma a carregar os dados antes de aparecer modelos de angular vazios (atenção que este podem demorar algum tempo a carregar a primeira vez que abrimos a página/criamos a BD).
+- Validações de CRUD server-side no modelo de dados, após generic BaseController.
+- Tornar blocos de código nas páginas de Index em componentes, de forma a não repetir código de tabelas etc.
+- Adaptar projeto ao SignalR.
+- Mapear propriedades no JsonResult.
+- Para resolver o JSON date problem:https://stackoverflow.com/questions/206384/how-do-i-format-a-microsoft-json-date, criar um controlador angular utils para gerir estas dates (foi resolvido diretamente no controlador).
+- Páginas para gestão de professores, estudantes e notas.
+- Erro cascade delete quando apagamos os Subjects que dependem das Grades, devia apagar as Grades automaticamente (resolvido fazendo override dos Delete/update) - Resolvido com override nos metodos dando a referência do objeto correto ao EF.
+- Algumas validações front-end anti SQL Injection, expressões regulares em ng-pattern, etc.
 
 
 ## Authors
